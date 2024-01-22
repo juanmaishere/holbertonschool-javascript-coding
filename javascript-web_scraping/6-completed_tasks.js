@@ -9,9 +9,9 @@ request.get(url, (error, response, body) => {
   const jsonResponse = JSON.parse(body);
   const tasksdict = {};
 
-  for (let i = 0; i < jsonResponse.results.length; i++) {
-    const task = jsonResponse.results[i].completed;
-    const userid = jsonResponse.results[i].userId;
+  for (let i = 0; i < jsonResponse.length; i++) {
+    const task = jsonResponse[i].completed;
+    const userid = jsonResponse[i].userId;
     if (task === true) {
       tasksdict[userid] = (tasksdict[userid] || 0) + 1;
     }
