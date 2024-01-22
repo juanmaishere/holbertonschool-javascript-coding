@@ -10,5 +10,5 @@ fs.readFile(filepath, 'utf-8', (error, data) => {
   }
   else {
       console.log(data);
-    }
-  });
+  }
+});
