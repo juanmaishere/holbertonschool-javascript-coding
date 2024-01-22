@@ -7,5 +7,9 @@ request.get(url, (error, response, body) => {
   if (error) {
     console.error(error);
   }
-  console.log(body);
+  const jsonResponse = JSON.parse(body);
+
+  if (jsonResponse.title) {
+    console.log(jsonResponse.title);
+  }
 });
