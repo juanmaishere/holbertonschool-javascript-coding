@@ -13,7 +13,7 @@ request.get(url, (error, response, body) => {
     const characters = jsonResponse.results[i].characters;
 
     for (let j = 0; j < characters.length; j++) {
-      if (characters[j].includes("18")) {
+      if (characters[j].includes('18')) {
         movies += 1;
         break; // No need to continue checking if found
       }
